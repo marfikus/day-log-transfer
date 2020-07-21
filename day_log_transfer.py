@@ -35,3 +35,9 @@ last_day = lines[last_date_line_num:]
 with open("test2.txt", "a", encoding="utf-8") as f:
     f.write("\n\n")
     f.writelines(last_week)
+
+# обновляем файл недельного лога (оставляем только последний день):
+# with open(DAY_LOG_WEEK, "w", encoding="utf-8") as f:
+with open("test.txt", "w", encoding="utf-8") as f:
+    f.writelines(last_day)
+
